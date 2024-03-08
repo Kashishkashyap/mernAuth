@@ -10,7 +10,7 @@ const Posts = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const response = await fetch(`mern-auth-backend-kohl.vercel.app/posts?page=${currentPage}`, {
+                const response = await fetch(`https://mern-auth-frontend-mocha.vercel.app/posts?page=${currentPage}`, {
                     headers: {
                         "token": localStorage.getItem('token')
                     }

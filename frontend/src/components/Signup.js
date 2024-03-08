@@ -18,7 +18,7 @@ const Signup = (props) => {
             props.showAlert("Passwords do not match", "danger");
             return;
         }
-        const response = await fetch(`mern-auth-backend-kohl.vercel.app/signup`, {
+        const response = await fetch(`https://mern-auth-frontend-mocha.vercel.app/signup`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
