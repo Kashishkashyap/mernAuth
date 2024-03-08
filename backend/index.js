@@ -26,13 +26,13 @@ db.once('open', function () {
     console.log("DataBase Connected");
 });
 
-
-app.use('/', userAuth);
-app.use('/', post);
-
 app.get('/', (req, res) => {
     res.send("Hi")
 })
+app.use('/', userAuth);
+app.use('/', post);
+
+
 app.listen(process.env.PORT, () => {
     console.log(`Listening on port ${process.env.PORT}`);
 })
