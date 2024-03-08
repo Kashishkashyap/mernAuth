@@ -8,7 +8,7 @@ const Signin = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch(`https://mern-auth-frontend-mocha.vercel.app/signin`, {
+        const response = await fetch(`https://mern-auth-backend-kohl.vercel.app/signin`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
