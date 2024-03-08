@@ -4,6 +4,7 @@ import Signin from './components/Signin';
 import Signup from './components/Signup';
 import Alert from './components/Alert';
 import Post from './components/Post';
+import Home from './components/Home';
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -35,6 +36,7 @@ function App() {
     <Router>
       <Alert alert={alert} />
       <Routes>
+        <Route path="/" element={<Home showAlert={showAlert} />} />
         <Route path="/signin" element={<Signin showAlert={showAlert} />} />
         <Route path="/signup" element={<Signup showAlert={showAlert} />} />
         {/* Protected route for posts */}

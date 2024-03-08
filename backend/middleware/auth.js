@@ -9,8 +9,8 @@ const fetchUser = async (req, res, next) => {
         return res.status(401).send({ error: "Invalid Token" })
     }
     try {
-        const data = jwt.verify(token, JWT_SECRET);
-        req.user = data.user;
+        // const data = jwt.verify(token, JWT_SECRET);
+        // req.user = data.user;
         next();
     } catch (error) {
         return res.status(401).send({ error: "Invalid Token" })
